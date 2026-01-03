@@ -1,0 +1,16 @@
+Dear friend,
+This letter is written slowly with care and patience.
+Handwriting reflects emotions and personal thoughts.
+Each word flows naturally from the heart and mind.
+Writing by hand improves memory and creativity.
+In earlier days people used handwritten letters to communicate.
+Handwritten notes carry warmth and emotional connection.
+This dataset is created to train a machine learning model.
+The model learns character by character patterns.
+Recurrent neural networks are effective for sequence learning.
+This text helps the model generate handwritten style output.
+
+Dear friend,
+Writing letters by hand improves focus and clarity.
+Handwriting is a personal art that machines try to learn.
+This text is repeated to increase dataset size.
