@@ -68,6 +68,65 @@ In this project, RNN predicts the **next character** based on previous character
 
 ---
 
+## Project Setup
+
+Handwritten_Text_Generation/
+│
+├── app.py             
+├── model.py               
+├── handwritten.txt       
+├── requirements.txt      
+└── README.md              
+
+---
+
+## project setup
+
+🖥️ Environment Setup
+
+1️⃣ Install Python
+Python version
+Verify:
+
+``Bash
+python --version
+
+
+2️⃣ Create Project Folder
+
+``Bash
+mkdir Handwritten_Text_Generation
+cd Handwritten_Text_Generation
+
+3️⃣ Create Virtual Environme
+
+``Bash
+python -m venv 
+
+4️⃣ Install Dependencies
+Create requirements.txt:
+Txt
+tensorflow
+numpy
+streamlit
+
+Install:
+``Bash
+pip install -r requirements.txt
+
+
+5️⃣ Dataset Setup
+Create handwritten.txt and add handwritten-style text
+
+
+6️⃣ Run Project
+``Bash
+streamlit run app.py
+
+
+---
+
+
 ## 🧠 Model Architecture
 
 1. **Embedding Layer**
@@ -78,8 +137,7 @@ In this project, RNN predicts the **next character** based on previous character
 
 3. **Dense Layer**
    - Predicts the next character from vocabulary
-
-Architecture Flow:
+
 
 ---
 
@@ -96,15 +154,17 @@ https://github.com/user-attachments/assets/f207cd26-2047-467d-b7db-02a733069749
 
 
 ---
-🙏 Acknowledgments
+## 🙏 Acknowledgments
 
-CodSoft for providing the internship opportunity
+- CodSoft for providing the internship opportunity
 
-TensorFlow and Streamlit documentation
+- TensorFlow and Streamlit documentation
 
-Open-source ML community
+- Open-source ML community
 
-✅ Result
+---
+
+## ✅ Result
 
 The trained RNN successfully generates handwritten-style text based on the learned patterns from the dataset.
 The Streamlit interface allows users to interactively generate text with a visually appealing UI.
