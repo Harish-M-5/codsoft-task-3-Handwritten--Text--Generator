@@ -5,15 +5,13 @@ def train_model(text):
 
     if len(text) < 200:
         raise ValueError("Please add more text to handwritten.txt (min 200 characters)")
-
-    # -------- CHAR MAPPING --------
+        
     vocab = sorted(set(text))
     char2idx = {u: i for i, u in enumerate(vocab)}
     idx2char = np.array(vocab)
 
-    text_as_int = np.array([char2idx[c] for c in text])
-
-    # -------- CREATE SEQUENCES --------
+    text_as_int = np.array([char2idx[c] for c in text]
+                           
     seq_length = 40
 
     X = []
@@ -26,7 +24,6 @@ def train_model(text):
     X = np.array(X)
     y = np.array(y)
 
-    # -------- MODEL --------
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(len(vocab), 128),
         tf.keras.layers.SimpleRNN(256, return_sequences=True),
@@ -41,3 +38,4 @@ def train_model(text):
     model.fit(X, y, epochs=10, batch_size=16, verbose=1)
 
     return model, char2idx, idx2char
+
