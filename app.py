@@ -3,14 +3,12 @@ import tensorflow as tf
 import numpy as np
 from model import train_model
 
-# ---------- PAGE CONFIG ----------
 st.set_page_config(
     page_title="Handwritten Text Generator",
     page_icon="✍️",
     layout="centered"
 )
 
-# ---------- CUSTOM CSS ----------
 st.markdown("""
 <style>
 body {
@@ -24,21 +22,17 @@ body {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------- TITLE ----------
 st.title("✍️ Handwritten Text Generator")
 st.subheader("Character-level RNN using Machine Learning")
 
-# ---------- LOAD DATA ----------
 with open("handwritten.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
-# ---------- TRAIN MODEL ----------
 with st.spinner("Training model... please wait ⏳"):
     model, char2idx, idx2char = train_model(text)
 
 st.success("Model trained successfully ✅")
 
-# ---------- TEXT GENERATION ----------
 start_string = st.text_input("Enter starting text:", "Dear")
 length = st.slider("Text length", 100, 500, 300)
 
@@ -66,3 +60,4 @@ def generate_text(model, start_string):
 if st.button("✨ Generate Handwritten Text"):
     output = generate_text(model, start_string)
     st.text_area("Generated Text", output, height=300)
+
